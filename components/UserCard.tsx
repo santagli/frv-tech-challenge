@@ -26,12 +26,11 @@ export default function UserCard({ user }: UserCardProps): JSX.Element {
         />
       </div>
 
-      {/* Ícono de favorito */}
       <ActionIcon
         className={styles.favoriteIcon}
         variant="transparent"
         onClick={(e) => {
-          e.preventDefault(); // Evita que el link se dispare al hacer clic en el corazón
+          e.preventDefault();
           toggleFavorite(user);
         }}
       >
