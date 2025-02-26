@@ -1,0 +1,36 @@
+.repos {
+  margin-top: 2rem;
+}
+
+.repoCard {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.repoCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.repoTitle {
+  color: rgb(128, 29, 217);
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.repoTitle:hover {
+  text-decoration: underline;
+  color: rgb(153, 74, 224);
+}
+
+.repoBadge {
+  background-color: rgb(211, 0, 152);
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
