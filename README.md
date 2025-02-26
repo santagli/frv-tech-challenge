@@ -1,40 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🚀 Challenge Técnico Frontend - Frávega Tech
 
-## Getting Started
+Este repositorio contiene la resolución del challenge técnico para **Frávega Tech**.  
+La aplicación está desarrollada en **Next.js (page router)** y consume la **API de GitHub Users** para listar, buscar y marcar usuarios como favoritos.
 
-First, run the development server:
+---
+
+## 🎯 Objetivo
+
+Crear una aplicación web que permita:  
+✅ Buscar usuarios en GitHub mediante la API.  
+✅ Listar los usuarios con sus nombres y avatares.  
+✅ Marcar usuarios como favoritos (sin persistencia).  
+✅ Mostrar detalles de un usuario seleccionado.
+
+---
+
+## 📌 Requisitos
+
+### 🏠 **Home (CSR)**
+
+- Obtener una **lista inicial** de usuarios desde la API de GitHub.
+- Mostrar los usuarios en una lista con **nombres y avatares**.
+- Implementar un **buscador** que filtre usuarios **haciendo peticiones a la API**.
+- Cada usuario debe tener un **enlace a su página de detalle**.
+- Permitir marcar y desmarcar usuarios como **favoritos** (sin necesidad de persistir).
+
+### 👤 **Página de Detalle del Usuario (SSR)**
+
+- Mostrar los **detalles del usuario seleccionado** desde la lista.
+  - Nombre, avatar, bio y repositorios.
+- Indicar si el usuario está en **favoritos** y permitir **agregar o eliminar** de la lista.
+
+### 🎨 **Estilo**
+
+Se puede usar:
+
+- **CSS puro**
+- **Styled-components**
+- **Librerías de componentes** como Material-UI, Mantine, etc.
+
+---
+
+## 🔗 API Utilizada
+
+La aplicación consume los siguientes endpoints de GitHub:
+
+- **Lista de usuarios:**
+  ```bash
+  GET https://api.github.com/users
+  ```
+- **Buscar usuarios por nombre:**
+  ```bash
+  GET https://api.github.com/search/users?q={term}
+  ```
+- **Detalle de un usuario:**
+  ```bash
+  GET https://api.github.com/users/{username}
+  ```
+
+---
+
+## 🛠️ Instalación y Ejecución
+
+Para correr el proyecto localmente, seguí estos pasos:
+
+### 1️⃣ **Clonar el repositorio**
+
+```bash
+git clone https://github.com/santagli/frv-tech-challenge.git
+cd fravega-challenge
+```
+
+### 2️⃣ **Instalar dependencias**
+
+```bash
+npm install
+# o
+yarn install
+```
+
+### 3️⃣ **Ejecutar el proyecto**
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación se ejecutará en `http://localhost:3000`.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 💂️️ Estructura del Proyecto
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```
+📂 src
+ ├── 📂 components      # Componentes reutilizables
+ │   ├── FavoriteButton.tsx
+ │   ├── RepositoriesList.tsx
+ │   ├── UserProfile.tsx
+ │   ├── UserStats.tsx
+ │   ├── ErrorMessage.tsx
+ │   └── ...
+ ├── 📂 context         # Contexto global (favoritos)
+ ├── 📂 pages           # Páginas principales (Home, Detalle)
+ ├── 📂 hooks           # Hooks custom
+ └── 📂 types           # Tipado de datos
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Posibles Mejoras Futuras
 
-To learn more about Next.js, take a look at the following resources:
+- 📌 Utilizar **App Router** en lugar de **Page Router** ya que es la solución que propone Next (Se hizo con page router por solicitud del proyecto)
+- 📌 Agregar **unit test** por cuestiones de tiempo no se agregaron.
+- 📌 Implementar **servicio** para persistir favoritos.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📅 Notas Finales
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Cualquier duda escribime
+🤝 **¡Gracias por revisar este challenge!**
