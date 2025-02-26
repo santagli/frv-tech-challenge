@@ -13,8 +13,21 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["@testing-library/jest-dom", "jest"],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"], 
+      "@components/*": ["components/*"],
+      "@components": ["components/index"],
+      "@hooks/*": ["hooks/*"],
+      "@hooks": ["hooks/index"],
+      "@context/*": ["context/*"],
+      "@context": ["context/index"],
+      "@styles/*": ["styles/*"],
+      "@theme": ["./theme.ts"],
+      "@types/*": ["types/*"],
+      "@types": ["types/index"],
+      "@config": ["config/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -5,6 +5,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-low: rgb(128, 29, 217);
+  --primary: rgb(68, 0, 153);
+  --primary-low-brightness: rgba(68, 0, 153, 0.5);
+  --secondary: rgb(211, 0, 152);
+  --secondary-low-brightness: rgb(211, 0, 152, 0.5);
+  --secondary-low: rgb(217, 49, 117);
+  --dark-gray: rgb(136, 136, 136);
+  --light-gray: rgb(240, 240, 240);
+  --light-gray-start: rgb(200, 200, 200);
+  --light-gray-end: rgb(240, 240, 240);
+  --dark-violet-background: rgb(57, 1, 74);
+  --default-gradient: linear-gradient(
+    135deg,
+    var(--secondary) 0%,
+    var(--primary) 100%
+  );
+  --gray-gradient: linear-gradient(
+    135deg,
+    var(--light-gray-start) 0%,
+    var(--light-gray-end) 100%
+  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +37,6 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--light-gray);
   font-family: Arial, Helvetica, sans-serif;
 }
